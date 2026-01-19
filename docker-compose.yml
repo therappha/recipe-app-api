@@ -1,0 +1,15 @@
+# version x.x
+
+services:
+  #Name of the service
+  app:
+    build:   # build context, where the dockerfile is
+      context: .
+      args:
+        - DEV=true
+    ports:   # maps host:container port
+      - "8000:8000"
+    volumes: # bind mount the code on our machine as a volume on docker to sync the code!!!!
+      - ./app:/app
+    command: # this command will be overridden by docker compose run, but when not specified it will run this by default!
+      sh -c "python manage.py runserver 0.0.0.0:8000"
