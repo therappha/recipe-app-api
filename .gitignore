@@ -1,14 +1,15 @@
-.env
+# Python cache files
+__pycache__/
+**/__pycache__/
 
-./**/__pycache__/
-
-#migrations
-
-app/migrations/
-app/**/migrations/
-
-# database files
-./app/*.sqlite3
+# Database files
+*.sqlite3
+db.sqlite3
+*.db
 
 # VSCode
 .vscode/
+
+tests.md
+
+.env
