@@ -1,0 +1,14 @@
+.env
+
+./**/__pycache__/
+
+#migrations
+
+app/migrations/
+app/**/migrations/
+
+# database files
+./app/*.sqlite3
+
+# VSCode
+.vscode/
