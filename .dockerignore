@@ -1,0 +1,16 @@
+# Git
+.git
+.gitignore
+
+# Docker
+.docker
+# Python
+
+# __pycache__/ is a cached directory for Python proccess files, but we don't need to include them in the Docker image.
+app/__pycache__/
+app/**/__pycache__/
+
+# venv
+.env/
+.venv/
+venv/
