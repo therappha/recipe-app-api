@@ -9,7 +9,20 @@ services:
         - DEV=true
     ports:   # maps host:container port
       - "8000:8000"
+    depends_on:
+      - db
     volumes: # bind mount the code on our machine as a volume on docker to sync the code!!!!
       - ./app:/app
     command: # this command will be overridden by docker compose run, but when not specified it will run this by default!
       sh -c "python manage.py runserver 0.0.0.0:8000"
+    env_file:
+      - .env
+  db:
+    image: postgres:18.1-alpine3.23
+    volumes:
+      - dev-db-data:/var/lib/postgresql/data
+    env_file:
+      - .env
+
+volumes:
+  dev-db-data:

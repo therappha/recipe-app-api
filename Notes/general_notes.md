@@ -32,3 +32,20 @@ or for django-admin
 1. Create a .github/workflows/config_name.yml file, the name of the config does not matter as long as it ends with .yml
 2. Set a trigger for the action, like push or pull_request
 3. Add steps for running testing and linting
+
+
+for actions check for https://github.com/marketplace?type=actions
+
+
+
+File Upload Testing
+
+Caching
+
+Signals
+
+Custom Managers e Querysets
+
+Middleware
+
+Background Taks
